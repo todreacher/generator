@@ -1,0 +1,17 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Traits\Models\Validate\UpdateValidate;
+
+trait {{class}}UpdateValidate
+{
+    use UpdateValidate;
+
+    public static function getUpdateRules()
+    {
+        return [
+
+        ];
+    }
+}

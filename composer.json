@@ -1,0 +1,31 @@
+{
+  "name": "todreacher/generator",
+  "description": "Advanced Laravel generators",
+  "keywords": ["generators"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tod Reacher",
+      "email": "tod.reacher@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "^5.8|~6.0|~7.0"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "~2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "TodReacher\\Generators\\": "src/"
+    }
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "TodReacher\\Generators\\GeneratorsServiceProvider"
+          ]
+      }
+  }
+}

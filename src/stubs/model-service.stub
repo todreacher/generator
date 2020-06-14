@@ -1,0 +1,15 @@
+<?php
+
+
+namespace App\Services\{{namespace}};
+
+use {{modelNamespace}};
+use App\Services\Service;
+
+class {{class}}Service extends Service
+{
+    public function __construct()
+    {
+        self::$model = {{modelName}}::class;
+    }
+}

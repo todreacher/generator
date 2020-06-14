@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers\Api\v1\{{namespace}};
+
+use App\Http\Controllers\Api\ApiController;
+use {{modelIndexRequest}};
+use {{modelUpdateRequest}};
+use {{modelStoreRequest}};
+use {{modelResource}};
+use {{modelResources}};
+use {{modelNamespace}};
+use {{modelService}};
+use App\Traits\Controllers\Api\ShowTrait;
+use App\Traits\Controllers\Api\StoreTrait;
+use App\Traits\Controllers\Api\UpdateTrait;
+use App\Traits\Controllers\Api\DestroyTrait;
+
+class {{class}} extends ApiController
+{
+    use ShowTrait,
+        StoreTrait,
+        UpdateTrait,
+        DestroyTrait;
+
+    public function __construct()
+    {
+        self::$model              = {{modelClass}}::class;
+        self::$service            = {{modelServiceClass}}::class;
+        self::$resource           = {{modelResourceClass}}::class;
+        self::$resourceCollection = {{modelResourcesClass}}::class;
+    }
+
+    /**
+     * Сервисные статусы услуг
+     *
+     * @param IndexRequest $request
+     *
+     * @bodyParam name string Название
+     *
+     * @return Response
+     */
+    public function index(IndexRequest $request)
+    {
+        $model = (new self::$model());
+        return new self::$resourceCollection($model->paginate());
+    }
+}

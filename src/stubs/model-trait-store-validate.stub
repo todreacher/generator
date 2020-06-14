@@ -1,0 +1,17 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Traits\Models\Validate\StoreValidate;
+
+trait {{class}}StoreValidate
+{
+    use StoreValidate;
+
+    public static function getStoreRules()
+    {
+        return [
+
+        ];
+    }
+}

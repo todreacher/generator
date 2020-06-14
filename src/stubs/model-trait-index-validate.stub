@@ -1,0 +1,17 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Traits\Models\Validate\IndexValidate;
+
+trait {{class}}IndexValidate
+{
+    use IndexValidate;
+
+    public static function getIndexRules()
+    {
+        return [
+
+        ];
+    }
+}
